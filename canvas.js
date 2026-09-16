@@ -1,13 +1,4 @@
-let c = document.getElementById("myCanva");
-let ctx = c.getContext("2d");		
 
-// SRC: https://www.tutorialspoint.com/article/get-the-size-of-the-screen-current-web-page-and-browser-window-in-javascript
-// sets the canvas 
-c.width = 500;
-c.height = 500;
-// 
-// 
-// 
 
 
 
@@ -55,6 +46,8 @@ function onMove(event) {
 	let ctx = c.getContext("2d");
 	// console.log(event.pageX);
 	// console.log(event.pageY);
+	let x_padding = -4;
+	let y_padding = -100;
 
 	// clear canvas and show all drawn circles
 	clear_canvas();
@@ -66,11 +59,11 @@ function onMove(event) {
 	// show position of mouse cursor
 	ctx.beginPath();
 	
-	ctx.arc(event.pageX - 5, event.pageY - 110, 10, 0, 2 * Math.PI);
+	ctx.arc(event.pageX + x_padding, event.pageY + y_padding, 10, 0, 2 * Math.PI);
 	ctx.fill();
 
 	if(clicked) {
-		balls[balls.length] = [event.pageX - 5, event.pageY-110];
+		balls[balls.length] = [event.pageX + x_padding, event.pageY + y_padding];
 	}
 		
 }
