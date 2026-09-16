@@ -5,15 +5,19 @@
 	<title>My first webpage</title>
 
 	<!--link rel="stylesheet" href="path to file" IMPORTING CSS FILES -->
-	<link rel="stylesheet" href="main.css">
-	
+	<link rel="stylesheet" href="first.css">
+
 </head>
-<body>
+<body  onmousemove="onMove(event)" onclick="onClick(event)">
+	<div>
+		<p> Hello my name is luke. I am a Computer Science Major at Bridgewater State University. This is a website for my Web Application Development class. I plan to put more effort into a better website idea.</p>
+		<p> Feel free to make drawings on this canvas below. click once to enter drawing mode and click again to exit.</p>
+	</div>
 	<!-- This is MY comment-->
-	<canvas id="myCanva" width=2000 length=1000 style="width:2000;height:2000;"></canvas>
-	<button onclick="button_create_balls()">Press to create balls</button>
-	<script src="canvas.js"></script>
+	<canvas id="myCanva"></canvas>
 	
+
+	<script src="canvas.js"></script>
 </body>
 
 
