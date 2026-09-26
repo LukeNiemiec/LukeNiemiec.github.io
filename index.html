@@ -1,25 +1,51 @@
 <!DOCTYPE html>
 <html> 
-<head>
-	<meta charset="utf-8">
-	<title>My first webpage</title>
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- adding dynamic styles based on screen width -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- adding bootstrap styles -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
 
-	<!--link rel="stylesheet" href="path to file" IMPORTING CSS FILES -->
-	<link rel="stylesheet" href="first.css">
-	<script src="canvas.js"></script>
-</head>
-<body  onmousemove="onMove(event)" onclick="onClick(event)">
-	<div>
-		<p> Hello my name is Luke. I am a Computer Science Major at Bridgewater State University. This is a website for my Web Application Development class. I plan to put more effort into a better website idea.</p>
-		<p> Feel free to make drawings on this canvas below. click once to enter drawing mode and click again to exit.</p>
-	</div>
-	<!-- This is MY comment-->
-	<canvas id="myCanva" height=600px width=800px></canvas>
+		<title>My first webpage</title>
+
+		<!--link rel="stylesheet" href="path to file" IMPORTING CSS FILES -->
+		<link rel="stylesheet" href="first.css">
+		
+		<!-- <script src="canvas.js"></script> -->
+
+		<style>
+			main-content-box {
+				margin-left: 100px;
+			}
+		</style>
+	</head>
 	
-
-	<script src="canvas.js"></script>
-</body>
-
-
+	<body>
+	<div class="container row">
+		
+			<!-- main content -->
+			<div class="col-sm container">
+			
+				<!-- Title -->
+				<div class="row"> 
+					<h2 class="title">Luke Niemiec</h2>
+					<p>This is just some webpage I am building for my web development class at Bridgewater State University. I want to build forever and I wonder if I could use my own website as a sort of blog.</p>
+					<p>However, this is new and all so, no promises that it isnt forgotten to be erased when remebered</p>
+				</div>
+				
+			
+			</div>
+			
+			<!-- other pages list -->
+			<div class="col-sm-2 offset-sm-1 mx-100 pagelist">
+				<h4><b>Pages</b>:</h4>
+				<ul>
+					<li><a href="project.html">Projects</a></li>
+				</ul>
+			</div>
+		</div>
+	</body>
 </html>
-<!-- install preview code -->

@@ -1,19 +1,11 @@
-
-div {
-	padding: 5px;
+body {
+	background-color: #f2fcff;
 }
 
-canvas {
+div {
+	padding: 10px;
+}
 
-	border: 2px solid black;
-	/* display: inline; */
-	/* height:100%; */
-	/* min-height: 100%; */
-	/* width:100%; */
-	position: fixed;
-	
-	/* background: lime; */
-	/* overflow:auto; */
-	z-index: 5;
-	cursor: none;
+pagelist {
+	right: 100;
 }

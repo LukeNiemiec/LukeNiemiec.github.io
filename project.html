@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- adding dynamic styles based on screen width -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- adding bootstrap styles -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+		<!-- adding page default styles -->
+		<link rel="stylesheet" href="first.css">
+
+		<style>	
+			projectlist {
+				padding: 10px;
+			}
+		</style>
+
+	</head>
+	
+	<body>
+		<div class="container row">
+		
+			<!-- main content -->
+			<div class="col container" >
+			
+				<!-- Title -->
+				<div class="row"> 
+					<h1><b>My Projects</b></h1>
+				</div>
+				&nbsp;
+				&nbsp;
+				
+				<!-- Projects list -->
+				<div class="row">
+					<h3>Wireless Microphone</h3>
+					<p>I made a wireless microphone to easily record and stream microphone data to my nixos machines.</p>
+					<p>It also has the capability:</p>
+					<ul class="list-group">
+						<li class="list-group-item"><b>Reducing noise from audio signal</b></li>
+						<li class="list-group-item"><b>Representing signal amplitude over time</b></li>
+						<li class="list-group-item"><b>Representing signal frequencies over time</b></li>
+						<li class="list-group-item"><b>Representing log mel spectrogram of audio signal</b>: all three dimensions of audio signal tuned to how a human would percieve the signal</li>
+					</ul>
+					&nbsp;
+					<p>This tool will help me process speech data for a local speech to text model that I am currently working on</p>
+
+					<p>The microphone itself is made from an ESP32, a INMP441 Microphophone, a DIY 5V voltage regulator and a 9 volt battery.</p>
+					<p>The microphone's communication method is through its access point created on startup. It will send raw 16-bit PCM bytes as Datagrams to the connected client on the network and that has initiated a fo-"connection" over over UDP</p>
+					<!-- TODO: make styles and file for a picture of your  -->
+					&nbsp;
+					<img class="microphone-img" src="microphone.jpeg">
+					<figcaption>The wireless microphone with the leg mel sprectrogram of a recording saying "my name is luke".</figcaption>
+					
+				</div>
+
+				&nbsp;
+				&nbsp;
+				<div class="row">
+					<h3><a href="https://github.com/LukeNiemiec/NmapScan">Network Analyzer</a></h3>
+					<p>Since there are tons on network types and protocols this project is no where near complete, however I keep on adding to it when I encounter a new problem.</p>
+					<p>This python program can collect traffic on a selected wifi interface and analyze scanned packets from pcap or pcapng files.</p>
+					<p>As of right now the program can collect traffic from a network using tshark and collect systems and ports that are discoverable on the network and have future ideas to correlate their results.</p>
+					<p>I have put alot of focus in the speed of creating profiles of scanned devices using multithreading techniques, however the functionality to parse each protocol differently and represent that as useful information is </p>
+					<p>The program has many flaws and has alot of potential for improvement:</p>
+					<ul class="list-group">
+					<li class="list-group-item">Cache and correlate scanned network device profiles from both tshark and nmap</li>
+					<li class="list-group-item">Scan wifi network on monitor mode and interpret corresponding results from that network layer</li>
+					<li class="list-group-item">Scan wifi network using promiscuous mode to extend discoverable packets from devices</li>
+					<li class="list-group-item">Analyze UDP packet Protocols</li>
+					<li class="list-group-item">Analyze more TCP unencrypted application layer protocols</li>
+					</ul>
+				</div>
+				&nbsp;
+				&nbsp;
+				<div class="row">
+					<h3><a href="https://github.com/LukeNiemiec/MITM-Proxy">MITM Proxy Server</a></h3>
+					<p>For undergraduate research in my sophomore year at Bridgewater State University I made a Man-In-The-Middle proxy server to see the headers of https requests.</p>
+					<p>The flow of the Proxy was to perform two ssl handshakes with both the client and the host pretending to be the other.</p>
+					<p>When forwarding packets between the two parties there is a stage between decrypting the data from one party and encrypting the data for the other to be able to see the content of the data flowing between.</p>
+					<p>This happens while the client and host think they are talking directly to each other.</p>
+					<p>Its been a while since ive taken a look at the code and the data captured to know if you could see the text/html content between.</p>
+				</div>
+
+
+				<div class="row">
+					<h3>COMP335 Project Idea: Chat rooms</h3>
+					<p>This project will allow users to connect to open chat rooms, create new chat rooms and chat with other users within a chat room.</p>
+					<p>I forsee the biggest obsticle for this project is finding a format to preserve chat logs: database, flat-file, cached on user's system or a hybrid of these ive listed. </p>
+					<p>Depending on the architecture of data storage we choose, we will have to make some data formatting to make sure the user cant send anything harmfull to the system.</p>
+					<p>Anyways, im sure my partner Cecilia and I will figure out a solution when we rough it out.</p>
+				</div>
+			</div>
+			
+			<!-- other pages list -->
+			<div class="col-sm-2 offset-sm-1 mx-100 pagelist">
+				<h4><b>Pages</b>:</h4>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+				</ul>
+			</div>
+		</div>
+	
+	</body>
+
+</html>
