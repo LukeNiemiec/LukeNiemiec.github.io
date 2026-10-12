@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- adding dynamic styles based on screen width -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<!-- adding bootstrap styles -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+		<title>My first webpage</title>
+
+		<!--link rel="stylesheet" href="path to file" IMPORTING CSS FILES -->
+		<link rel="stylesheet" href="first.css">
+		
+		<!-- <script src="canvas.js"></script> -->
+
+		<style>
+			main-content-box {
+				margin-left: 100px;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<div class="container row">
+			
+				<!-- main content -->
+				<div class="col-sm container">
+				
+					<!-- Title -->
+					<div class="row"> 
+						<h2 class="title">STT Model Project</h2>
+						<p>I wont be taking a deep learning course during my Junior year at Bridgewater State University due to low enrollment. I instead took another computer science elective that lets me work on any project idea I would like and I would have another Undergraduate Research Project under my belt.</p>
+						
+						<p>For this class, I wanted to pick a project idea that would strengthen my knowledge of all the stages of machine learning.</p>
+						<p>One of the first and boldest ideas to come to mind was to build a Speech-To-Text model in python and train it to quickly transcribe a stream of audio data.</p>
+						<p>I couldnt shake this idea because many tech companies offer this as a service in the form of API or a product and its probably %50 of my own JARVIS.</p>
+						<p>I really dont care if its off of my compute and as a bonus to saving money tokens-wise, it would mean my audio data wouldnt go through third parties.</p>
+						<p>Additionally, Ive been thinking alot about user interfaces, and I cant think of a better user interface than speech if its done right.</p>
+					</div>
+
+					<div class="row"> 
+						<h2 class="title">Functional and NF Requirements:</h2>		
+						<ul class="list-group">
+							<li class="list-group-item">
+								<p><b>Transcription</b>: The user speaks english and it processes the stream of audio and outputs a stream of tokens.</p>
+							</li>
+							<li class="list-group-item">
+								<p><b>Accuraccy</b>: The model produces the correct token for each chunk processed, even when nothing is said.</p>
+							</li>
+							<li class="list-group-item">
+								<p><b>Speed</b>: The model's output should be no longer .</p>
+							</li>
+						</ul>							
+					</div>
+					<div class="row"> 
+						<h2 class="title">Project Outline</h2>
+
+						<p>First, I need to know what language, frameworks and tools I will use to make this project<p>
+						<p><b>Language</b>: Python 3.14<p>
+						<p><b>Python 3.14 Packages</b>:</p>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<p><b>librosa</b>: I will use this libraries tools to produce log_mel_spectrograms of audio chunks. These represent audio data's frequency and amplitude over time aswell as tuned to human's perception of the audio-data.</p>
+							</li>
+							<li class="list-group-item"><p><b>matplotlib</b>: This library will be used for viewing chunks of data to test for model and algorithm accuracy during development phase.</p></li>
+							<li class="list-group-item"><p><b>pytorch</b>: I will use this library to design the model architecture and to automatically train the model.</p></li>
+							<li class="list-group-item"><p><b>noisereduce</b>: This library will reduce noise not needed for processing the speech data.</p></li>
+							<li class="list-group-item"><p><b>NVIDIA: NeMo token duration tools</b>: I will use these tools to produce token durations of audio data to train my model's Token duration calculation.</p></li>
+						</ul>
+						&nbsp;
+						&nbsp;
+						<p>Next im going to need to know <b>where to get my data</b>.</p>
+						<p>There are plenty of open-source datasets that are precisely what I am looking for, this will be used for general training on many token patterns and durations </p>
+						<p>Moreover, I would definately want it fine-tuned to my speech patterns after initial training with open-source data sets.</p>
+					</div>
+
+					<div class="row"> 
+						<h2 class="title">Model Architecture:</h2>
+						<p><b>INPUT</b>: Overlapping 35ms segments of an audio signal that is pre-processed and is represented as a log mel spectrogram</p>
+						<p><b>OUTPUTS</b>: BPE Seintence Piece token (1025 possible outputs), token duration (optional)</p>
+						<p><b>Architecture</b>: RNN Transducer & Token Duration Preduction</p>
+						<p>The RNN Transducer consists of an <b>encoder</b> to process input log mel spectrograms and a <b>decoder</b> to process corresponding tokens</p>
+					</div>
+
+					<div class="row"> 
+						<h2 class="title">Progress:</h2>
+						<ul class="list-group">
+							<li class="list-group-item">
+								<span>10/12/26</span>
+
+
+								<p>TODO make progress report for today</p>
+							</li>
+							<!-- <li class="list-group-item"></li> -->
+		
+						</ul>				
+					</div>
+					
+
+					
+				</div>
+				
+				<!-- other pages list -->
+				<div class="col-sm-2 offset-sm-1 mx-100 pagelist">
+					<h4><b>Pages</b>:</h4>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+
+						<li><a href="project.html">Projects</a></li>
+					</ul>
+				</div>
+			</div>
+	</body>
+
+</html>
