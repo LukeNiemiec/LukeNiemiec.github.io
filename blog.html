@@ -68,6 +68,7 @@
 							<li class="list-group-item"><p><b>matplotlib</b>: This library will be used for viewing chunks of data to test for model and algorithm accuracy during development phase.</p></li>
 							<li class="list-group-item"><p><b>pytorch</b>: I will use this library to design the model architecture and to automatically train the model.</p></li>
 							<li class="list-group-item"><p><b>noisereduce</b>: This library will reduce noise not needed for processing the speech data.</p></li>
+							<!-- <li class="list-group-item"><p><b>pyaudio</b>: This library will help me test audio data from files as if I am </p></li> -->
 							<li class="list-group-item"><p><b>NVIDIA: NeMo token duration tools</b>: I will use these tools to produce token durations of audio data to train my model's Token duration calculation.</p></li>
 						</ul>
 						&nbsp;
@@ -92,9 +93,19 @@
 								<span>10/12/26</span>
 
 
-								<p>TODO make progress report for today</p>
+								<p>I can decide on my data later, right now I want to dig into the meat and beans of deep learning model architecture.</p>
+								<p>I wrote the last line and I dont think I can explain my chosen architecture well right now but its going to be a psuedo TDT architecture similar to how NVIDIA's NeMo TDT model works. The gist of it is that it has an output for token duration aswell as the token present in each log mel spectrogram over time.</p>
+								<p>I will have to find some tricks and fill the gaps in my knowledge to write more about it so I am going to start with some facts.</p>
+								<ul class="list-group">
+									<li class="list-group-item">The input for the model will be a 0.35 ms log mel spectrogram of an audio signal so I need to make some tools to automate going through my data and getting all of those sequences from many files.</li>
+									<!-- <li class="list-group-item"></li> -->
+
+								</ul>
+								<p><b><a href="https://github.com/LukeNiemiec/COMP399-STT-Model">Automating Input</a></b></p>
+								
+								<p>I have attached a link here showing my progress</p>
 							</li>
-							<!-- <li class="list-group-item"></li> -->
+							
 		
 						</ul>				
 					</div>
