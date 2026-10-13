@@ -103,7 +103,17 @@
 								</ul>
 								<p><b><a href="https://github.com/LukeNiemiec/COMP399-STT-Model">Automating Input</a></b></p>
 								
-								<p>I have attached a link here showing my progress</p>
+								<p>I have attached a link here showing my progress, but all I have done is get log mel spectrograms from each of the files and some extra functionality I might need later.</p>
+								<p>The data will have to be in the format:</p>
+								<ul class="list-group">
+									<li class="list-group-item"><p><b>File</b>(str): file that the data is from</p></li>
+									<li class="list-group-item"><p><b>Duration</b>(float): file duration in seconds</p></li>
+									<li class="list-group-item"><p><b>Text</b>(str): what was spoken in the file</p></li>
+									<li class="list-group-item"><p><b>Tokens</b>(int[]): BPE Sientence Piece token encoding of the text</p></li>
+									<li class="list-group-item"><p><b>Token Durations</b>(int[]): length in seconds of each token above</p></li>
+								</ul>
+								&nbsp;
+								<p>Whats next is that I need to use a tool or make an algorithm to generate the Tokens and Token Durations.</p>
 							</li>
 							
 		
